@@ -2,11 +2,28 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Description>Standard DI container interface abstraction</Description>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Authors>Neill Verreynne</Authors>
+    <Company>Remnant Software</Company>
+    <Copyright>© 2022 by Neill Verreynne</Copyright>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageIcon>Remnant.png</PackageIcon>
+    <PackageTags>container;inject;dependency;transient;singleton;injection;pull;global</PackageTags>
+    <RepositoryUrl>https://github.com/RemnantSoftware/Remnant.Dependency.Interface</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
     <None Update="LICENSE">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Update="Remnant.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
     </None>
   </ItemGroup>
 
