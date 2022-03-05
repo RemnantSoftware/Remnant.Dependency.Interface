@@ -10,12 +10,20 @@ namespace Remnant.Dependency.Interface
 		/// <typeparam name="TType">The type that will be used to resolve the singleton entry</typeparam>
 		/// <param name="instance">The singleton instance</param>
 		/// <returns>Returns the container</returns>
-		IContainer Register<TType>(TType instance) where TType : class;
+		IContainer Register<TType>(object instance) where TType : class;
 
 		/// <summary>
-		/// Register a singleton with the container
+		/// Register a singleton using a specified type to resolve
 		/// </summary>
-		/// <param name="instance">The singelton instance</param>
+		/// <typeparam name="TType">The type that will be used to resolve the singleton entry</typeparam>
+		/// <param name="instance">The singleton instance</param>
+		/// <returns>Returns the container</returns>
+		IContainer Register(Type type, object instance);
+
+		/// <summary>
+		/// Register a singleton
+		/// </summary>
+		/// <param name="instance">The singleton instance</param>
 		/// <returns>Returns the container</returns>
 		IContainer Register(object instance);
 

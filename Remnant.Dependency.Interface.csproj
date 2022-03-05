@@ -11,6 +11,7 @@
     <PackageIcon>Remnant.png</PackageIcon>
     <PackageTags>container;inject;dependency;transient;singleton;injection;pull;global</PackageTags>
     <RepositoryUrl>https://github.com/RemnantSoftware/Remnant.Dependency.Interface</RepositoryUrl>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
