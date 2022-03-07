@@ -28,14 +28,14 @@ namespace Remnant.Dependency.Interface
 		IContainer Register(object instance);
 
 		/// <summary>
-		/// Register a transient with the container
+		/// Register a sing;eton with the container
 		/// </summary>
 		/// <typeparam name="TType">The type that will be used to resolve and construct entry</typeparam>
 		/// <returns>Returns the container</returns>
 		IContainer Register<TType>() where TType : class, new();
 
 		/// <summary>
-		/// Register a transient with the container
+		/// Register a singleton with the container
 		/// </summary>
 		/// <typeparam name="TType">The type that will be used to resolve entry</typeparam>
 		/// <typeparam name="TObject">The type that will be constructed and return on resolve</typeparam>
@@ -59,12 +59,19 @@ namespace Remnant.Dependency.Interface
 		/// Resolve type to get the instance
 		/// </summary>
 		/// <typeparam name="TType">The type that was registered</typeparam>
-		/// <returns>Returns a transient or singleton instance of the specified type</returns>
+		/// <returns>Returns a singleton instance of the specified type</returns>
 		TType ResolveInstance<TType>() where TType : class;
 
 		/// <summary>
 		/// Clear container from all registeries
 		/// </summary>
 		IContainer Clear();
+
+		/// <summary>
+		/// Returns the internal container that to be used for direct access
+		/// </summary>
+		/// <typeparam name="TContainer">Specify the type for the internal container. Exception will be thrown if casting fails.</typeparam>
+		/// <returns></returns>
+		TContainer InternalContainer<TContainer>() where TContainer: class;
 	}
 }
